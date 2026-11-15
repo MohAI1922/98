@@ -1,0 +1,70 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{microtype}
+\geometry{margin=1in}
+
+\begin{document}
+
+\noindent
+\textbf{Muhammed M. El-Sayed}\\
+Department of Electrical and Computer Engineering / Applied Mathematics\\
+Email: \texttt{author@domain.edu} \quad $|$ \quad Date: \today
+
+\vspace{1.5em}
+
+\noindent
+\textbf{To:} The Editor-in-Chief\\
+\textbf{Journal:} \emph{SIAM Journal on Numerical Analysis (SINUM)} / \emph{IEEE Transactions on Signal Processing (TSP)}
+
+\vspace{1.5em}
+
+\noindent
+\textbf{Subject:} Submission of Original Research Manuscript: \emph{``Differential Geometry of Integral Derivative Manifolds: Noise Decoupling, Colored Noise Estimation, and Optimal Scale Calibration in Euclidean Domains''}
+
+\vspace{1em}
+
+\noindent
+Dear Editor-in-Chief,
+
+I am pleased to submit the above-titled original research manuscript for consideration for publication in your journal as a regular research article.
+
+\subsection*{Summary of Contributions and Significance}
+Numerical differentiation of noise-contaminated signals is a classic ill-posed inverse problem fundamental to scientific computing, control theory, and data-driven dynamical system discovery. Standard methods, including finite difference stencils and local polynomial filters (such as Savitzky-Golay), suffer from catastrophic variance amplification of order $\mathcal{O}(\sigma^2 / \Delta x^2)$ as grid spacing vanishes.
+
+In this work, I develop the theory of \textbf{Integral Derivative Manifolds (IDM)}, establishing a rigorous differential-geometric formulation that treats scale $\epsilon$ as an intrinsic Riemannian coordinate:
+\begin{enumerate}
+    \item \textbf{Exact Spatial Commutativity and Linearity:} I prove that the integral derivative operator commutes identically with spatial translation and reproduces exact linear fields with zero discretization artifact.
+    \item \textbf{Surface Geometry and Gaussian Curvature Rigidity:} I define the 2D Riemannian scale surface $\mathcal{M}_f = \{(x, \epsilon, \mathcal{D}_\epsilon f)\}$ and prove that its Gaussian curvature $K(x, \epsilon) \equiv 0$ vanishes identically for linear fields, while developing sharp curvature spikes at signal singularities.
+    \item \textbf{Colored (Ornstein-Uhlenbeck) Noise Theory:} For correlated noise with finite correlation length $\tau_c$, I derive the closed-form variance and prove that temporal correlation softens the noise singularity from $\mathcal{O}(\epsilon^{-3})$ to $\mathcal{O}(\epsilon^{-1})$.
+    \item \textbf{Optimal AMISE Scale Optimization and Two-Pass Pilot Calibration:} I derive the closed-form MSE-optimal scale $\epsilon^*(x) \asymp (\sigma^2 \Delta x)^{1/5}$ and establish a practical two-pass algorithm with automatic variance estimation.
+\end{enumerate}
+
+Extensive empirical evaluations across benchmark signals (Doppler chirp, shock transitions, and chaotic Lorenz dynamics) demonstrate up to a \textbf{246$\times$ error reduction} over central finite differences and consistent superiority over Savitzky-Golay and Tikhonov regularization.
+
+\subsection*{Statements and Declarations}
+\begin{itemize}
+    \item \textbf{Originality:} This manuscript represents original work that has not been published previously and is not currently under consideration for publication elsewhere.
+    \item \textbf{Sole Authorship:} I, Muhammed M. El-Sayed, am the sole author of this work and have executed all theoretical derivations, algorithmic design, and empirical benchmarks.
+    \item \textbf{Conflict of Interest:} The author declares no competing financial, personal, or institutional interests.
+    \item \textbf{Reproducibility and Open Science:} The complete Python implementation, benchmark suites, and figure generation scripts are self-contained and publicly accessible for verification.
+\end{itemize}
+
+\subsection*{Suggested Expert Reviewers}
+\begin{enumerate}
+    \item \textbf{Prof. Steven L. Brunton} (University of Washington) -- Expert in data-driven dynamics, sparse regression, and numerical differentiation of chaotic systems.
+    \item \textbf{Prof. Rick Chartrand} (Lancaster / Los Alamos National Laboratory) -- Leading pioneer in numerical differentiation of non-smooth noisy signals and Total Variation regularization.
+    \item \textbf{Prof. Tony Lindeberg} (KTH Royal Institute of Technology) -- Authority on continuous scale-space theory and differential invariants in signal and image processing.
+\end{enumerate}
+
+Thank you very much for your time and consideration of this manuscript.
+
+\vspace{2em}
+
+\noindent
+Sincerely,\\
+\textbf{Muhammed M. El-Sayed}
+
+\end{document}

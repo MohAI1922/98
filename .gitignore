@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# LaTeX build intermediates (keep .tex, .bib, and final .pdf)
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
